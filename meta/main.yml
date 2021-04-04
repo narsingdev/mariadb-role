@@ -24,8 +24,4 @@ galaxy_info:
     - name: RHEL
       versions:
         - ootpa
-   galaxy_tags:
-    - database
-    - db
-    - mysql
-    - mariadb
+   

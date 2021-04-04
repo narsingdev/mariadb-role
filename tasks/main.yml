@@ -1,0 +1,17 @@
+---
+  - name: installing {{ pkg }} package
+    yum:
+      name: "{{ pkg }}"
+      state: present
+  - name: start and enable {{ svc }} service 
+    service:
+      name: "{{ svc }}"
+      state: started
+      enabled: true
+  - name: opening {{ rule }} service in firewall
+    firewalld:
+      service: "{{ rule }}"
+      state: enabled
+      permanent: true
+      immediate: true
+
